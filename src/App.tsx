@@ -95,7 +95,7 @@ function App() {
 
                 <div className={'content-inner'}>
 
-                    <div className={'description description-outer .inactive'}>
+                    <div className={'description description-outer .active'}>
                         <div style={{display:"block", margin:"auto"}}>
                             <div style={{display:"flex", margin:"auto"}}>
                                 <p style={{margin: "auto", marginBottom: 32, color:"indianred", fontSize: "min(56px, 4vmin)", fontFamily:"Norse"}}>Advanced Evidence Tracking</p>

@@ -1,3 +1,4 @@
+
 .app {
   text-align: center;
   min-height: calc(100vh);
@@ -42,6 +43,8 @@
   display: inline-block;
   max-width: min(80vw, 960px);
   margin: 64px auto auto;
+  padding: 16px;
+  overflow: hidden;
 }
 
 .image-wrapper {
@@ -176,7 +179,7 @@
   max-height: min(60vh, 800px);
   aspect-ratio: 1571/3332;
   transition: transform .2s;
-  image-rendering: high-quality;                 /* Universal support since 2021   */
+  image-rendering: high-quality;
 }
 
 .description {
@@ -186,7 +189,7 @@
 
 .description-outer {
   display: flex;
-  margin: 1.6vh 1vw;
+  margin: 3.12vh 1vw;
   border-radius: 30px;
   padding: 32px;
   overflow: clip;
@@ -198,8 +201,9 @@
 }
 
 .description.active {
-  animation: 2s 0s cubic-bezier(.26,0,.02,1.01) descriptionSlideInLeft;
+  animation: 2s 0s cubic-bezier(.26,0,.02,1.01) descriptionSlideUp;
   opacity: 1;
+  overflow: clip;
 }
 
 .image-demo-1 {
@@ -351,7 +355,7 @@ ul {
   }
 }
 
-@keyframes descriptionSlideInLeft {
+@keyframes descriptionSlideUp {
   0% {
     transform: translateY(100%);
     opacity: 0;
@@ -359,15 +363,6 @@ ul {
   100% {
     transform: translateY(0%);
     opacity: 1;
-  }
-}
-
-@keyframes descriptionSlideInRight {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(100%);
   }
 }
 
